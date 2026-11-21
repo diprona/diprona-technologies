@@ -4,249 +4,382 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1422">
 
-  <title>DIPRONA TECHNOLOGIES | Official Website</title>
+  <title>DIPRONA TECHNOLOGIES | Digital Products & Software</title>
 
-  <meta name="description" content="DIPRONA TECHNOLOGIES is an Indian sole proprietorship engaged in software development and mobile application publishing.">
-  <meta name="keywords" content="DIPRONA TECHNOLOGIES, software development, mobile applications, Tipzo, RaceSignal">
-  <meta name="author" content="DIPRONA TECHNOLOGIES">
-  <meta name="theme-color" content="#101d32">
+  <meta name="description" content="DIPRONA TECHNOLOGIES is an Indian software and digital products company. Discover Tipzo and RaceSignal.">
 
   <style>
+    :root {
+      --bg: #0b1422;
+      --surface: #111e30;
+      --surface2: #17263a;
+      --gold: #d9ad60;
+      --white: #f5f7fa;
+      --muted: #a6b2c2;
+      --border: rgba(255,255,255,.10);
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #263449;
-      background: #f5f7fa;
+      font-family: Inter, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--white);
       line-height: 1.7;
     }
 
-    header {
-      background: #101d32;
-      color: white;
-      padding: 20px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    .brand {
-      font-size: 21px;
-      font-weight: 800;
-      letter-spacing: 1px;
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(11,20,34,.94);
+      backdrop-filter: blur(15px);
     }
 
     nav {
+      min-height: 78px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 22px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    nav a {
-      color: #dce5f0;
-      text-decoration: none;
-      font-size: 14px;
-      transition: color 0.2s;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
     }
 
-    nav a:hover {
-      color: #65b5ff;
+    .brand-icon {
+      width: 39px;
+      height: 39px;
+      display: grid;
+      place-items: center;
+      background: var(--gold);
+      color: #111827;
+      border-radius: 10px;
+      font-weight: 900;
+      font-size: 19px;
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: 3px;
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-button {
+      padding: 10px 17px;
+      border: 1px solid var(--gold);
+      border-radius: 6px;
+      color: var(--gold);
     }
 
     .hero {
-      background: linear-gradient(135deg, #101d32, #203e60);
-      color: white;
-      padding: 110px 7%;
+      padding: 105px 0 100px;
       text-align: center;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(217,173,96,.13), transparent 55%);
     }
 
-    .hero .tag {
-      color: #83c5ff;
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 3px;
+    .eyebrow {
+      color: var(--gold);
       text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 22px;
     }
 
-    .hero h1 {
-      font-size: clamp(34px, 6vw, 54px);
-      margin: 18px 0;
-      line-height: 1.2;
+    h1 {
+      font-size: clamp(38px, 6vw, 67px);
+      line-height: 1.13;
+      letter-spacing: -2px;
+      max-width: 850px;
+      margin: auto;
     }
+
+    h1 span { color: var(--gold); }
 
     .hero p {
-      max-width: 680px;
-      margin: auto;
-      color: #d5e0ed;
-      font-size: 17px;
+      max-width: 650px;
+      margin: 24px auto 32px;
+      color: var(--muted);
+      font-size: 16px;
     }
 
     .button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 13px 27px;
-      background: #3289d8;
-      color: white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 23px;
       border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.2s;
+      font-weight: 700;
+      font-size: 13px;
+      transition: .2s;
     }
 
-    .button:hover {
-      background: #176db4;
+    .button-gold {
+      background: var(--gold);
+      color: #101827;
     }
 
-    section {
-      padding: 75px 7%;
+    .button-gold:hover {
+      background: #edc77e;
+      transform: translateY(-2px);
     }
 
-    .section-title {
+    .button-outline {
+      border: 1px solid var(--border);
+      color: var(--white);
+      margin-left: 10px;
+    }
+
+    .button-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    section { padding: 85px 0; }
+
+    .section-heading {
       text-align: center;
-      margin-bottom: 38px;
+      margin-bottom: 45px;
     }
 
-    .section-title h2 {
-      color: #142640;
-      font-size: 30px;
+    .section-heading h2 {
+      font-size: clamp(28px, 4vw, 38px);
       margin-bottom: 10px;
     }
 
-    .section-title p {
-      color: #6d7b8e;
+    .section-heading p {
+      color: var(--muted);
+      font-size: 14px;
     }
 
     .about {
-      max-width: 850px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,.015);
+    }
+
+    .about-content {
+      max-width: 790px;
       margin: auto;
       text-align: center;
     }
 
-    .about p {
-      margin-bottom: 15px;
-    }
-
-    .apps {
-      background: white;
+    .about-content p {
+      color: var(--muted);
+      font-size: 15px;
     }
 
     .app-grid {
-      max-width: 1000px;
-      margin: auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
     }
 
     .app-card {
-      background: #f5f7fa;
-      border: 1px solid #e1e7ef;
-      border-radius: 12px;
-      padding: 30px;
-      transition: transform 0.2s, box-shadow 0.2s;
+      background: linear-gradient(145deg, var(--surface2), var(--surface));
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      min-height: 390px;
+      transition: .25s;
     }
 
     .app-card:hover {
+      border-color: rgba(217,173,96,.55);
       transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(16, 29, 50, 0.08);
+    }
+
+    .app-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 25px;
     }
 
     .app-icon {
-      width: 55px;
-      height: 55px;
-      border-radius: 12px;
-      background: #dcecff;
-      color: #236eb4;
+      width: 58px;
+      height: 58px;
       display: grid;
       place-items: center;
-      font-size: 23px;
-      font-weight: bold;
-      margin-bottom: 18px;
+      border-radius: 13px;
+      font-size: 25px;
+      font-weight: 900;
+      background: rgba(217,173,96,.15);
+      color: var(--gold);
+      border: 1px solid rgba(217,173,96,.25);
+    }
+
+    .status {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #82d6a2;
+      border: 1px solid rgba(130,214,162,.3);
+      padding: 6px 10px;
+      border-radius: 30px;
+    }
+
+    .status-soon {
+      color: var(--gold);
+      border-color: rgba(217,173,96,.3);
     }
 
     .app-card h3 {
-      color: #142640;
-      font-size: 22px;
-      margin-bottom: 10px;
+      font-size: 27px;
+      margin-bottom: 8px;
+    }
+
+    .app-card .subtitle {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 17px;
     }
 
     .app-card p {
-      color: #65748a;
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 20px;
     }
+
+    .features {
+      list-style: none;
+      color: #d2d9e3;
+      font-size: 13px;
+      margin-bottom: 28px;
+    }
+
+    .features li { margin: 7px 0; }
+
+    .features li::before {
+      content: "✓";
+      color: var(--gold);
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    .app-bottom {
+      margin-top: auto;
+    }
+
+    .version {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 12px;
+    }
+
+    .release-link {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    .release-link:hover { text-decoration: underline; }
 
     .contact {
       text-align: center;
-      background: #eaf1f8;
+      background:
+        radial-gradient(ellipse at 50% 100%, rgba(217,173,96,.10), transparent 60%);
+      border-top: 1px solid var(--border);
     }
 
     .contact p {
-      margin: 10px 0;
+      color: var(--muted);
+      margin: 12px 0 25px;
     }
 
-    .contact a {
-      color: #176db4;
-      text-decoration: none;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
+    .email {
+      color: var(--gold);
+      font-size: 17px;
+      font-weight: 600;
     }
 
     footer {
-      background: #101d32;
-      color: #c4d0df;
-      text-align: center;
-      padding: 28px 7%;
-      font-size: 13px;
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
     }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    footer p, footer a {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    footer a:hover { color: var(--gold); }
 
     .footer-links {
-      margin: 12px 0;
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
     }
 
-    .footer-links a {
-      color: #a9d5ff;
-      text-decoration: none;
-      margin: 0 10px;
+    @media(max-width: 700px) {
+      .nav-links { gap: 12px; font-size: 11px; }
+      .nav-button { display: none; }
+      .brand { font-size: 13px; }
+      .brand small { font-size: 8px; }
+      .hero { padding: 75px 0; }
+      section { padding: 65px 0; }
+      .app-grid { grid-template-columns: 1fr; }
+      .app-card { padding: 25px; }
+      .footer-content { flex-direction: column; text-align: center; }
     }
 
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        justify-content: center;
-        text-align: center;
-      }
-
-      nav {
-        justify-content: center;
-        gap: 14px;
-      }
-
-      .hero {
-        padding: 75px 6%;
-      }
-
-      section {
-        padding: 55px 6%;
-      }
-
-      .brand {
-        font-size: 19px;
-      }
+    @media(max-width: 380px) {
+      .nav-links { gap: 9px; }
+      .nav-links a { font-size: 10px; }
     }
   </style>
 </head>
@@ -254,149 +387,193 @@
 <body>
 
 <header>
-  <div class="brand">DIPRONA TECHNOLOGIES</div>
+  <div class="container">
+    <nav>
+      <a href="#" class="brand">
+        <div class="brand-icon">D</div>
+        <div>
+          DIPRONA
+          <small>TECHNOLOGIES</small>
+        </div>
+      </a>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#apps">Applications</a>
-    <a href="#contact">Contact</a>
-  </nav>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#apps">Our Apps</a>
+        <a href="#contact">Contact</a>
+        <a href="#apps" class="nav-button">Explore Apps</a>
+      </div>
+    </nav>
+  </div>
 </header>
 
 <main>
 
-  <!-- HOME -->
-  <section class="hero" id="home">
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Independent Software & Digital Products</div>
 
-    <div class="tag">
-      Technology • Software • Innovation
-    </div>
-
-    <h1>Building Digital Experiences</h1>
-
-    <p>
-      DIPRONA TECHNOLOGIES is an Indian software and mobile
-      application development business focused on creating
-      useful digital products and technology solutions.
-    </p>
-
-    <a class="button" href="#apps">
-      Explore Our Applications
-    </a>
-
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-
-    <div class="section-title">
-      <h2>About Us</h2>
-      <p>Technology with a practical purpose.</p>
-    </div>
-
-    <div class="about">
+      <h1>
+        Technology built for
+        <span>better experiences.</span>
+      </h1>
 
       <p>
-        DIPRONA TECHNOLOGIES is a sole proprietorship based in India,
-        engaged in software development, digital products and
-        mobile application publishing.
+        DIPRONA TECHNOLOGIES is an Indian software and digital
+        products company focused on developing useful,
+        accessible and engaging mobile applications.
       </p>
 
-      <p>
-        Our focus is on developing and maintaining digital
-        applications that provide useful experiences to their users.
-      </p>
-
+      <a href="#apps" class="button button-gold">Explore Our Applications →</a>
+      <a href="#about" class="button button-outline">About Us</a>
     </div>
-
   </section>
 
-  <!-- APPLICATIONS -->
-  <section class="apps" id="apps">
-
-    <div class="section-title">
-      <h2>Our Applications</h2>
-      <p>Explore our mobile application projects.</p>
-    </div>
-
-    <div class="app-grid">
-
-      <div class="app-card">
-
-        <div class="app-icon">T</div>
-
-        <h3>Tipzo</h3>
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="eyebrow">Who We Are</div>
+        <div class="section-heading">
+          <h2>About DIPRONA TECHNOLOGIES</h2>
+        </div>
 
         <p>
-          A multi-sport tipster community platform where users
-          can discover tipsters, explore sports tips and follow
-          their performance.
+          DIPRONA TECHNOLOGIES is an Indian sole proprietorship
+          engaged in software development, digital products and
+          mobile application publishing. We aim to create practical
+          digital experiences through thoughtfully developed
+          applications and technology solutions.
         </p>
-
       </div>
-
-      <div class="app-card">
-
-        <div class="app-icon">R</div>
-
-        <h3>RaceSignal</h3>
-
-        <p>
-          A horse racing tips and information application
-          providing selections and racing-related information
-          for users.
-        </p>
-
-      </div>
-
     </div>
-
   </section>
 
-  <!-- CONTACT -->
+  <section id="apps">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="eyebrow">Our Digital Products</div>
+        <h2>Applications</h2>
+        <p>Explore our mobile applications and their latest releases.</p>
+      </div>
+
+      <div class="app-grid">
+
+        <!-- RaceSignal -->
+        <article class="app-card">
+          <div class="app-top">
+            <div class="app-icon">R</div>
+            <span class="status">Available</span>
+          </div>
+
+          <h3>RaceSignal</h3>
+          <div class="subtitle">Horse Racing Tips & Information</div>
+
+          <p>
+            A horse racing tips platform bringing selections,
+            race information and performance tracking together
+            in one convenient mobile application.
+          </p>
+
+          <ul class="features">
+            <li>Daily horse racing tips and selections</li>
+            <li>UK, USA, Australia and India coverage</li>
+            <li>FREE and VIP selections</li>
+            <li>Horse, venue and race-time information</li>
+            <li>Results and performance tracking</li>
+          </ul>
+
+          <div class="app-bottom">
+            <a
+              class="button button-gold"
+              href="https://github.com/diprona/diprona-technologies/releases/download/racesignal-v1.0.0/app-release.apk"
+            >
+              ↓ Download Android APK
+            </a>
+
+            <span class="version">Latest version: 1.0.0 · Build 1</span>
+
+            <a
+              class="release-link"
+              href="https://github.com/diprona/diprona-technologies/releases"
+            >
+              View all RaceSignal releases →
+            </a>
+          </div>
+        </article>
+
+        <!-- Tipzo -->
+        <article class="app-card">
+          <div class="app-top">
+            <div class="app-icon">T</div>
+            <span class="status status-soon">Coming Soon</span>
+          </div>
+
+          <h3>Tipzo</h3>
+          <div class="subtitle">Multi-Sport Tipster Community</div>
+
+          <p>
+            A multi-sport community platform connecting sports
+            tipsters and followers through profiles, selections
+            and performance insights.
+          </p>
+
+          <ul class="features">
+            <li>Multi-sport tipster community</li>
+            <li>Tipster profiles and discovery</li>
+            <li>Performance leaderboard</li>
+            <li>Tipster subscriptions</li>
+            <li>Sports tips and results tracking</li>
+          </ul>
+
+          <div class="app-bottom">
+            <span class="button button-outline">Android App Coming Soon</span>
+            <span class="version">Official release announcement coming soon.</span>
+
+            <a
+              class="release-link"
+              href="https://github.com/diprona/diprona-technologies/releases"
+            >
+              View release history →
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
   <section class="contact" id="contact">
+    <div class="container">
+      <div class="eyebrow">Get In Touch</div>
+      <h2>Connect With Us</h2>
+      <p>
+        For product enquiries, technical support or business
+        communication, contact our team.
+      </p>
 
-    <div class="section-title">
-      <h2>Contact Us</h2>
-      <p>For business and application-related enquiries.</p>
-    </div>
-
-    <p><strong>DIPRONA TECHNOLOGIES</strong></p>
-
-    <p>India</p>
-
-    <p>
-      Email:
-      <a href="mailto:dheerajchandra840@gmail.com">
+      <a class="email" href="mailto:dheerajchandra840@gmail.com">
         dheerajchandra840@gmail.com
       </a>
-    </p>
 
+      <p>India</p>
+    </div>
   </section>
 
 </main>
 
-<!-- FOOTER -->
 <footer>
-    <p>
-        © <span id="year"></span> DIPRONA TECHNOLOGIES.
-        All Rights Reserved.
-    </p>
+  <div class="container footer-content">
+    <p>© 2026 DIPRONA TECHNOLOGIES. All rights reserved.</p>
 
-    <p>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        &nbsp; | &nbsp;
-        <a href="terms.html">Terms & Conditions</a>
-        &nbsp; | &nbsp;
-        <a href="mailto:dheerajchandra840@gmail.com">Contact</a>
-    </p>
+    <div class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="mailto:dheerajchandra840@gmail.com">Contact</a>
+      <a href="https://github.com/diprona/diprona-technologies/releases">Releases</a>
+    </div>
+  </div>
 </footer>
-
-<script>
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
-</script>
 
 </body>
 </html>
